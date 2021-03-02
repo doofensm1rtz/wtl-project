@@ -1,6 +1,11 @@
 nav {
   background-color: #1c2237;
   padding: 0 15px;
+  height: 10vh;
+}
+
+.nav-active {
+  height: max-content;
 }
 
 a {

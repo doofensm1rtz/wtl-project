@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/loginForm.css">
 </head>
 
 <body>
-    <nav>
+    <nav class="nav-active">
         <ul class="menu">
             <li class="logo"><a href="#">Exam Cell Automation</a></li>
             <li class="item"><a href="#">About Us</a></li>
@@ -22,6 +23,22 @@
             <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
         </ul>
     </nav>
+
+    <div class="l-form">
+        <form action="" class="form">
+            <span class="book__icon"><i class='fas fa-book-open fa-border fa-3x'></i></span>
+            <h1 class="form__title">LOGIN</h1>
+            <div class="form__div">
+                <input type="text" class="form__input" placeholder=" ">
+                <label for="" class="form__label">User ID</label>
+            </div>
+            <div class="form__div">
+                <input type="password" class="form__input" placeholder=" ">
+                <label for="" class="form__label">Password</label>
+            </div>
+            <input type="submit" class="form__button" value="LOGIN">
+        </form>
+    </div>
 
     <script src="./javascript/navbar.js"></script>
 </body>
