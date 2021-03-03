@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/loginForm.css">
+    <link rel="stylesheet" href="./css/login/form.css">
+    <link rel="stylesheet" href="./css/login/checkbox.css">
+    <link rel="stylesheet" href="./css/login/radio_btn.css">
 </head>
 
 <body>
@@ -27,20 +29,58 @@
     <div class="l-form">
         <form action="" class="form">
             <span class="book__icon"><i class='fas fa-book-open fa-border fa-3x'></i></span>
-            <h1 class="form__title">LOGIN</h1>
+            <h1 class="form__title">LOG IN</h1>
+
+            <div class="rd__card">
+                <div class="rd__card_title">Choose user type</div>
+                <div class="rd__card_content">
+                    <input type="radio" name="rd" id="admin">
+                    <input type="radio" name="rd" id="staff">
+                    <input type="radio" name="rd" id="student">
+
+                    <label for="admin" class="rd__box rd__first">
+                        <div class="rd__wrapper">
+                            <span class="rd__circle"></span>
+                            <span class="rd__type">Admin</span>
+                        </div>
+                    </label>
+                    <label for="staff" class="rd__box rd__second">
+                        <div class="rd__wrapper">
+                            <span class="rd__circle"></span>
+                            <span class="rd__type">Staff</span>
+                        </div>
+                    </label>
+                    <label for="student" class="rd__box rd__third">
+                        <div class="rd__wrapper">
+                            <span class="rd__circle"></span>
+                            <span class="rd__type">Student</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
             <div class="form__div">
                 <input type="text" class="form__input" placeholder=" ">
                 <label for="" class="form__label">User ID</label>
             </div>
             <div class="form__div">
-                <input type="password" class="form__input" placeholder=" ">
+                <input id="pass__input" type="password" class="form__input" placeholder=" ">
                 <label for="" class="form__label">Password</label>
+                <span class="pass__icon"><i class="fa fa-eye-slash" aria-hidden="true"></i><span>
+            </div>
+            <div class="rm__checkbox">
+                <label class="ch__label">
+                    <input id="remember" type="checkbox">
+                    <div class="ch"></div>
+                    <p class="rm__text">Remember me</p>
+                </label>
             </div>
             <input type="submit" class="form__button" value="LOGIN">
         </form>
     </div>
 
     <script src="./javascript/navbar.js"></script>
+    <script src="./javascript/loginForm.js"></script>
 </body>
 
 </html>

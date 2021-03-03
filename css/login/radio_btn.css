@@ -1,0 +1,72 @@
+input[type="radio"]::selection {
+  background: var(--first-color);
+}
+
+.rd__card {
+  width: 300px;
+  margin-bottom: 2rem;
+  margin: 0 0 16px 0;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.rd__card .rd__card_title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.rd__card .rd__card_content {
+  margin-top: 20px;
+}
+
+.rd__card label.rd__box {
+  background: #ddd;
+  margin-top: 12px;
+  padding: 10px 12px;
+  display: flex;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#admin:checked ~ label.rd__first,
+#staff:checked ~ label.rd__second,
+#student:checked ~ label.rd__third {
+  border-color: var(--first-color);
+  background: #89cff0;
+}
+
+.rd__card label.rd__box:hover {
+  background: #89cff0;
+}
+
+.rd__card label.rd__box .rd__circle {
+  height: 22px;
+  width: 22px;
+  background: #ccc;
+  border: 5px solid transparent;
+  display: inline-block;
+  margin-right: 15px;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+  box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#admin:checked ~ label.rd__first .rd__circle,
+#staff:checked ~ label.rd__second .rd__circle,
+#student:checked ~ label.rd__third .rd__circle {
+  border-color: var(--first-color);
+  background: #fff;
+}
+
+.rd__card label.rd__box .rd__wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.rd__card input[type="radio"] {
+  display: none;
+}
