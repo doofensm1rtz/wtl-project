@@ -28,7 +28,7 @@ a {
 
 .item a:hover,
 .item a:hover::after {
-  color: #f00946;
+  color: #e0ac1c;
 }
 
 .menu {

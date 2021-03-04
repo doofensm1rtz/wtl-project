@@ -1,0 +1,148 @@
+footer {
+  bottom: 0;
+}
+
+.footer__distributed {
+  background-color: #1c2237;
+  width: 100%;
+  text-align: left;
+  font: bold 1rem;
+  padding: 3rem 3rem 3.5rem 3rem;
+  margin-top: 5rem;
+}
+
+.footer__distributed .footer__left,
+.footer__distributed .footer__center,
+.footer__distributed .footer__right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer__distributed .footer__left {
+  width: 30%;
+}
+
+.footer__distributed h3 {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Footer links */
+
+.footer__distributed .footer__links {
+  color: #fff;
+  margin: 1.25rem 0 0.75rem;
+}
+
+.footer__distributed .footer__links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__distributed .footer__company_name {
+  color: #8f9296;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+/* Footer Center */
+
+.footer__distributed .footer__center {
+  width: 35%;
+}
+
+.footer__distributed .footer__center i {
+  background-color: var(--first-color);
+  color: #fff;
+  font-size: 1.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2.4rem;
+  margin: 0.6rem 0.9rem;
+  vertical-align: middle;
+}
+
+.footer__distributed .footer__center p {
+  display: inline-block;
+  color: #fff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer__distributed .footer__center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 0.85rem;
+  line-height: 2;
+}
+
+.footer__distributed .footer__center p a {
+  color: #e0ac1c;
+  text-decoration: none;
+}
+
+/* Footer right */
+
+.footer__distributed .footer__right {
+  width: 30%;
+}
+
+.footer__distributed .footer__company_about {
+  line-height: 1.25rem;
+  color: #92999f;
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer__distributed .footer__company_about span {
+  display: block;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+}
+
+.footer__distributed .footer__icons {
+  margin-top: 1.55rem;
+}
+
+.footer__distributed .footer__icons a {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.2rem;
+  cursor: pointer;
+  background-color: var(--first-color);
+  border-radius: 0.125rem;
+
+  font-size: 1.25rem;
+  color: #fff;
+  text-align: center;
+  line-height: 2.2rem;
+
+  margin-right: 0.15rem;
+  margin-bottom: 0.275rem;
+}
+
+/* Responsive footer */
+@media (max-width: 880px) {
+  .footer__distributed .footer__left,
+  .footer__distributed .footer__center,
+  .footer__distributed .footer__right {
+    display: block;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .footer__distributed .footer__center {
+    margin-left: 0;
+  }
+}
