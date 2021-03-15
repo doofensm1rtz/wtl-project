@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Font Awesome CDN(required for icons)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <!--Admin Header-->
+    <nav class="nav-active" id="head">
+        <ul class="menu">
+            <li class="logo"><a href="#">Exam Cell Automation</a></li>
+            <li class="item"><a href="#">Profile</a></li>
+            <li class="item"><a href="#">Sign Out</a></li>
+            <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+
+    <!--Side Bar Menu-->
+    <div id="main">
+        <nav class="sidebar" id="left">
+            <div class="text">Side Menu</div>
+            <ul>
+                <li>
+                    <a href="#" class="dropdown-btn">Manage Users
+                        <span class="fa fa-caret-left"></span>
+                    </a>
+                    <ul>
+                        <li><a href="#">Student</a></li>
+                        <li><a href="#">Staff</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-btn">Exam Details
+                        <span class="fa fa-caret-left"></span>
+                    </a>
+                    <ul>
+                        <li><a href="#">Exam Slot</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Degrees</a></li>
+                        <li><a href="#">Class Room</a></li>
+                        <li><a href="#">Batches</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-btn">Schedule Management
+                        <span class="fa fa-caret-left"></span>
+                    </a>
+                    <ul>
+                        <li><a href="#">Schedule Exam Date</a></li>
+                        <li><a href="#">Allocate Invigilator</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-btn">Report Generation
+                        <span class="fa fa-caret-left"></span>
+                    </a>
+                    <ul>
+                        <li><a href="#">Registration Card</a></li>
+                        <li><a href="#">Student Result</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-btn">Manage Feedback
+                        <span class="fa fa-caret-left"></span>
+                    </a>
+                    <ul>
+                        <li><a href="#">Feedback Result</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--Common Footer across all pages-->
+    <!-- Create a separate footer.html & include it using jquery -->
+    <footer class="footer__distributed" id="foot">
+        <div class="footer__left">
+            <h3>Exam Cell Automation</h3>
+            <p class="footer__links">
+                <a href="#">About</a>
+                |
+                <a href="#">Contact</a>
+                |
+                <a href="#">FAQ</a>
+                |
+            </p>
+
+            <p class="footer__company_name">&#169; 2021 Exam Cell Automation </p>
+        </div>
+
+        <div class="footer__center">
+            <div>
+                <i class="fas fa-phone"></i>
+                <p>+91 22-27782183</p>
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i>
+                <p><a href="mailto:support@eca.com">support@eca.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer__right">
+            <p class="footer__company_about">
+                <span>About the company</span>
+                We aim to bring in a centralized system that will ensure the activities in the context of an examination
+                that can be effectively managed.
+            </p>
+            <div class="footer__icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./javascript/sidebar.js"></script>
+</body>
+
+</html>
