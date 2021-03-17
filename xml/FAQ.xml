@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./FAQ.xsl"?>
+<questionList>
+  <question>
+    <questionText>I forget my password, how to reset it?</questionText>
+    <answer>Go to the login page, click on forgot password link and follow the procedure to reset it.</answer>
+  </question>
+  <question>
+    <questionText>Why are my uploaded documents are not visible?</questionText>
+    <answer>After uploading the documents it will take some time for them to show up. Please wait for few minutes.</answer>
+  </question>
+  <question>
+    <questionText>Having problems submitting exam form?</questionText>
+    <answer>Please check your internet connectivity or if you are using VPN or other services. If still problem persists, contact us at support@eca.com</answer>
+  </question>
+  <question>
+    <questionText>Filled wrong details while filling exam form?</questionText>
+    <answer>Please contact us at support@eca.com</answer>
+  </question>
+  <question>
+    <questionText>How to download hall ticket?</questionText>
+    <answer>Log in -> Fill exam form -> Wait for approval -> Download button will appear</answer>
+  </question>
+</questionList>

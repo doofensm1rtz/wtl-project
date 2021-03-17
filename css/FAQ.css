@@ -1,0 +1,90 @@
+  .container {
+    margin: 0 auto;
+    padding: 4rem;
+    width: 70%;
+  }
+
+  .faq-title {
+    font-size: 1.75rem;
+    color: #373d51;
+    padding: 1.3rem;
+    margin: 0;
+    margin-left: -0.25rem;
+  }
+
+  .accordion .question {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    color: #7288a2;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .accordion .question:hover,
+  .accordion .question:hover::after {
+    cursor: pointer;
+    color: var(--first-color);
+  }
+
+  .accordion .question:hover::after {
+    border: 1px solid var(--first-color);
+  }
+
+  .accordion .question.active {
+    color: var(--first-color);
+    border-bottom: 1px solid var(--first-color);
+  }
+
+  .accordion .question::after {
+    font-family: 'Ionicons';
+    content: '\f218';
+    position: absolute;
+    right: 1rem;
+    font-size: 1rem;
+    color: #7288a2;
+    padding: 0.325rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    border: 1px solid #7288a2;
+    text-align: center;
+  }
+
+  .accordion .question.active::after {
+    font-family: 'Ionicons';
+    content: '\f209';
+    color: var(--first-color);
+    border: 1px solid var(--first-color);
+  }
+
+  .accordion .content {
+    opacity: 0;
+    padding: 0 1rem;
+    max-height: 0;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    clear: both;
+    transition: all 0.2s ease 0.15s;
+  }
+
+  .accordion .content p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .accordion .content.active {
+    opacity: 1;
+    padding: 1rem;
+    max-height: 100%;
+    transition: all 0.35s ease 0.15s;
+  }
+
+  @media all and (max-width: 968px) {
+    .container {
+      width: 90%;
+    }
+  }
