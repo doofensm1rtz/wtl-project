@@ -62,24 +62,43 @@ $("#pass__input").on("input", (e) => {
 
 // Login button click
 const loginButtonClick = (e) => {
-  e.preventDefault();
-
   if ($("input[name=rd]:checked").length === 0) {
+    e.preventDefault();
     alert("Select login type.");
     return;
   }
 
   if (passwordInput.value.length === 0 || inputUserID.value.length === 0) {
+    e.preventDefault();
     alert("Empty inputs.");
     return;
   }
 
   if (passwordInput.value.length < 8) {
+    e.preventDefault();
     alert("Enter password with length greater than 8");
     return;
   }
 
-  alert("Successful login");
+  const radioButtons = document.getElementsByName("rd");
+  let selectedLoginType = "";
+
+  for (i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+      selectedLoginType = radioButtons[i].value;
+      break;
+    }
+  }
+
+  const postData = {
+    username: inputUserID.value,
+    password: passwordInput.value,
+    loginType: selectedLoginType,
+  };
+
+  $.post("/login", postData, function (data) {
+    console.log(data);
+  });
 };
 
 const loginMouseOver = () => {

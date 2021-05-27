@@ -13,6 +13,10 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/login/form.css">
@@ -33,63 +37,44 @@
         </ul>
     </nav>
 
-    <div class="l-form">
-        <form action="" class="form">
-            <span class="book__icon"><i class='fas fa-book-open fa-border fa-3x'></i></span>
-            <h1 class="form__title">LOG IN</h1>
+    <div class="container mt-5">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Hall</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Start Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% studExam.map((exam, index)=> { %>
+                    <tr>
+                        <th scope="row">
+                            <%= index + 1 %>
+                        </th>
+                        <td>
+                            <%= exam.subject %>
+                        </td>
+                        <td>
+                            <%= exam.hall %>
+                        </td>
 
-            <div class="rd__card">
-                <div class="rd__card_title">Choose user type</div>
-                <div class="rd__card_content">
-                    <input type="radio" name="rd" id="admin">
-                    <input type="radio" name="rd" id="staff">
-                    <input type="radio" name="rd" id="student">
-
-                    <label for="admin" class="rd__box rd__first">
-                        <div class="rd__wrapper">
-                            <span class="rd__circle"></span>
-                            <span class="rd__type">Admin</span>
-                        </div>
-                    </label>
-                    <label for="staff" class="rd__box rd__second">
-                        <div class="rd__wrapper">
-                            <span class="rd__circle"></span>
-                            <span class="rd__type">Staff</span>
-                        </div>
-                    </label>
-                    <label for="student" class="rd__box rd__third">
-                        <div class="rd__wrapper">
-                            <span class="rd__circle"></span>
-                            <span class="rd__type">Student</span>
-                        </div>
-                    </label>
-                </div>
-            </div>
-
-            <div class="form__div">
-                <input type="text" class="form__input input__userID" placeholder=" ">
-                <label for="" class="form__label">User ID</label>
-            </div>
-            <div class="error_username">
-                <p>User ID must contain only letters and numbers.</p>
-            </div>
-            <div class="form__div">
-                <input id="pass__input" type="password" class="form__input" placeholder=" ">
-                <label for="" class="form__label">Password</label>
-                <span class="pass__icon"><i class="fa fa-eye-slash" aria-hidden="true"></i><span>
-            </div>
-            <div class="error_password">
-                <p>Password must contain only @, -, # or letters or numbers.</p>
-            </div>
-            <div class="rm__checkbox">
-                <label class="ch__label">
-                    <input id="remember" type="checkbox">
-                    <div class="ch"></div>
-                    <p class="rm__text">Remember me</p>
-                </label>
-            </div>
-            <input type="submit" class="form__button" value="LOGIN">
-        </form>
+                        <td>
+                            <% if (exam.date) { %>
+                                <%= exam.date.toLocaleDateString() %>
+                                    <% } %>
+                        </td>
+                        <td>
+                            <% if (exam.date) { %>
+                                <%= exam.date.getHours() %>:00
+                                    <% } %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
     </div>
 
     <footer class="footer__distributed">
@@ -121,7 +106,8 @@
         <div class="footer__right">
             <p class="footer__company_about">
                 <span>About the company</span>
-                We aim to bring in a centralized system that will ensure the activities in the context of an examination
+                We aim to bring in a centralized system that will ensure the activities in the context of an
+                examination
                 that can be effectively managed.
             </p>
             <div class="footer__icons">

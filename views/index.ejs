@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECA</title>
+
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/login/form.css">
+    <link rel="stylesheet" href="./css/login/checkbox.css">
+    <link rel="stylesheet" href="./css/login/radio_btn.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <noscript>Sorry, your browser does not support javascript</noscript>
+
+    <nav class="nav-active">
+        <ul class="menu">
+            <li class="logo"><a href="#">Exam Cell Automation</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="./xml/FAQ.xml">FAQ</a></li>
+            <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="l-form">
+        <form class="form">
+            <span class="book__icon"><i class='fas fa-book-open fa-border fa-3x'></i></span>
+            <h1 class="form__title">LOG IN</h1>
+
+            <div class="rd__card">
+                <div class="rd__card_title">Choose user type</div>
+                <div class="rd__card_content">
+                    <input type="radio" name="rd" id="admin" value="admin">
+                    <input type="radio" name="rd" id="staff" value="staff">
+                    <input type="radio" name="rd" id="student" value="student">
+
+                    <label for="admin" class="rd__box rd__first">
+                        <div class="rd__wrapper">
+                            <span class="rd__circle"></span>
+                            <span class="rd__type">Admin</span>
+                        </div>
+                    </label>
+                    <label for="staff" class="rd__box rd__second">
+                        <div class="rd__wrapper">
+                            <span class="rd__circle"></span>
+                            <span class="rd__type">Staff</span>
+                        </div>
+                    </label>
+                    <label for="student" class="rd__box rd__third">
+                        <div class="rd__wrapper">
+                            <span class="rd__circle"></span>
+                            <span class="rd__type">Student</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form__div">
+                <input type="text" class="form__input input__userID" placeholder=" ">
+                <label for="" class="form__label">User ID</label>
+            </div>
+            <div class="error_username">
+                <p>User ID must contain only letters and numbers.</p>
+            </div>
+            <div class="form__div">
+                <input id="pass__input" type="password" class="form__input" placeholder=" ">
+                <label for="" class="form__label">Password</label>
+                <span class="pass__icon"><i class="fa fa-eye-slash" aria-hidden="true"></i><span>
+            </div>
+            <div class="error_password">
+                <p>Password must contain only @, -, # or letters or numbers.</p>
+            </div>
+            <div class="rm__checkbox">
+                <label class="ch__label">
+                    <input id="remember" type="checkbox">
+                    <div class="ch"></div>
+                    <p class="rm__text">Remember me</p>
+                </label>
+            </div>
+
+            <input type="submit" class="form__button" value="LOGIN">
+        </form>
+    </div>
+
+    <footer class="footer__distributed">
+        <div class="footer__left">
+            <h3>Exam Cell Automation</h3>
+            <p class="footer__links">
+                <a href="#">About</a>
+                |
+                <a href="#">Contact</a>
+                |
+                <a href="./xml/FAQ.xml">FAQ</a>
+                |
+            </p>
+
+            <p class="footer__company_name">&#169; 2021 Exam Cell Automation </p>
+        </div>
+
+        <div class="footer__center">
+            <div>
+                <i class="fas fa-phone"></i>
+                <p>+91 22-27782183</p>
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i>
+                <p><a href="mailto:support@eca.com">support@eca.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer__right">
+            <p class="footer__company_about">
+                <span>About the company</span>
+                We aim to bring in a centralized system that will ensure the activities in the context of an examination
+                that can be effectively managed.
+            </p>
+            <div class="footer__icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./javascript/navbar.js"></script>
+    <script src="./javascript/loginForm.js"></script>
+</body>
+
+</html>
