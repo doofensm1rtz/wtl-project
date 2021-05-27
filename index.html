@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECA</title>
 
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
@@ -19,6 +22,8 @@
 </head>
 
 <body>
+    <noscript>Sorry, your browser does not support javascript</noscript>
+
     <nav class="nav-active">
         <ul class="menu">
             <li class="logo"><a href="#">Exam Cell Automation</a></li>
@@ -62,13 +67,19 @@
             </div>
 
             <div class="form__div">
-                <input type="text" class="form__input" placeholder=" ">
+                <input type="text" class="form__input input__userID" placeholder=" ">
                 <label for="" class="form__label">User ID</label>
+            </div>
+            <div class="error_username">
+                <p>User ID must contain only letters and numbers.</p>
             </div>
             <div class="form__div">
                 <input id="pass__input" type="password" class="form__input" placeholder=" ">
                 <label for="" class="form__label">Password</label>
                 <span class="pass__icon"><i class="fa fa-eye-slash" aria-hidden="true"></i><span>
+            </div>
+            <div class="error_password">
+                <p>Password must contain only @, -, # or letters or numbers.</p>
             </div>
             <div class="rm__checkbox">
                 <label class="ch__label">
