@@ -39,5 +39,9 @@ body {
   height: 200px;
 }
 
-.table-one--header {
+.admin-tables {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
